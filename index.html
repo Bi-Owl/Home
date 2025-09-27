@@ -31,10 +31,20 @@
                     <a href="#contact" class="text-gray-600 hover:text-emerald-600 px-2 py-1 rounded-md text-sm font-medium hover:scale-105 transition-transform">تماس با ما</a>
                 </div>
                 <div class="md:hidden flex items-center">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-emerald-600 hover:bg-emerald-50 focus:outline-none">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-emerald-600 hover:bg-emerald-50 focus:outline-none">
                         <i data-feather="menu"></i>
                     </button>
                 </div>
+            </div>
+        </div>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="text-emerald-600 block px-3 py-2 rounded-md text-base font-medium">خانه</a>
+                <a href="#about-us" class="text-gray-600 hover:text-emerald-600 block px-3 py-2 rounded-md text-base font-medium">درباره ما</a>
+                <a href="#programs" class="text-gray-600 hover:text-emerald-600 block px-3 py-2 rounded-md text-base font-medium">برنامه‌ها</a>
+                <a href="#mentors" class="text-gray-600 hover:text-emerald-600 block px-3 py-2 rounded-md text-base font-medium">مربیان</a>
+                <a href="#contact" class="text-gray-600 hover:text-emerald-600 block px-3 py-2 rounded-md text-base font-medium">تماس با ما</a>
             </div>
         </div>
     </nav>

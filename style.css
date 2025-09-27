@@ -4,9 +4,10 @@ html {
 
 body {
     font-family: Vazirmatn, sans-serif;
-    background-color: #f0fdf4;
+    background-color: #e6f9f0;
     background-image: linear-gradient(to right, #a7f3d0 1px, transparent 1px), linear-gradient(to bottom, #a7f3d0 1px, transparent 1px);
     background-size: 20px 20px;
+    background-attachment: local; /* Fix for pattern visibility on mobile */
     animation: moveGrid 2s linear infinite;
     padding-top: 120px;
 }
@@ -36,11 +37,11 @@ body {
 }
 
 .glassmorphism {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -82,5 +83,39 @@ body {
     }
     to {
         background-position: 20px -20px;
+    }
+}
+
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+#mobile-menu.open {
+  max-height: 250px; /* A height large enough to contain the menu items */
+}
+
+/* --- Responsive Adjustments for Mobile --- */
+
+@media (max-width: 480px) {
+    /* Adjust hero section text for smaller screens */
+    h1.text-4xl {
+        font-size: 2.5rem; /* 40px */
+        line-height: 1.2;
+    }
+
+    /* Reduce padding on the navigation island */
+    .dynamic-island {
+        padding: 8px 12px;
+    }
+
+    /* Make timeline more compact on mobile */
+    .timeline-item {
+        width: 130px;
+    }
+
+    .timeline-content {
+        padding: 0.75rem; /* 12px */
     }
 }
